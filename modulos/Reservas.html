@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reservas - RICURAS LA 23</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/Reservas.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>RICURAS LA 23</h1>
+
+        <h2>Realizar Reserva</h2>
+
+        <div class="field">
+            <label class="label">Tipo de mesa</label>
+
+            <div class="select">
+                <select id="tipoMesa" name="tipoMesa" required>
+                    <option value="">Seleccione un tipo de mesa</option>
+                    <option value="interior">Interior</option>
+                    <option value="exterior">Exterior</option>
+                    <option value="vip">VIP</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Nombre completo</label>
+
+            <input class="input"
+                   type="text"
+                   id="nombreCompleto"
+                   name="nombreCompleto"
+                   required
+                   placeholder="Ingrese su nombre completo">
+        </div>
+
+        <div class="field">
+            <label class="label">Fecha de reserva</label>
+
+            <input class="input"
+                   type="date"
+                   id="fechaReserva"
+                   name="fechaReserva"
+                   required>
+        </div>
+
+        <div class="field">
+            <label class="label">Cantidad de personas</label>
+
+            <input class="input"
+                   type="number"
+                   id="cantidadPersonas"
+                   name="cantidadPersonas"
+                   required
+                   placeholder="Ingrese la cantidad de personas">
+        </div>
+
+        <div class="botones">
+
+            <button class="button reservar"
+                    type="submit"
+                    id="buttonReserva">
+                Realizar Reserva
+            </button>
+
+            <a href="../index.html"
+               class="button regresar">
+                Regresar
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="../js/Reservas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

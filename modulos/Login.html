@@ -1,0 +1,77 @@
+  <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - RICURAS LA 23</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/Login.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>RICURAS LA 23</h1>
+        <h2>Iniciar Sesión</h2>
+
+        <div class="field">
+            <label class="label">Tipo de documento</label>
+
+            <div class="select">
+                <select id="tipoDocumento" name="tipoDocumento" required>
+                    <option value="cedula">Cédula de Ciudadanía</option>
+                    <option value="tarjetaIdentidad">Tarjeta de Identidad</option>
+                    <option value="cedulaExtranjeria">Cédula de Extranjería</option>
+                    <option value="pasaporte">Pasaporte</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Número de documento</label>
+
+            <input class="input"
+                   type="text"
+                   id="numeroDocumento"
+                   name="numeroDocumento"
+                   required
+                   placeholder="Ingrese su número de documento">
+        </div>
+
+        <div class="field">
+            <label class="label">Contraseña</label>
+
+            <input class="input"
+                   type="password"
+                   id="contraseña"
+                   name="contraseña"
+                   required
+                   placeholder="Ingrese su contraseña">
+        </div>
+
+        <div class="botones">
+
+            <button class="button iniciar"
+                    type="submit"
+                    id="buttonlogin">
+                Iniciar Sesión
+            </button>
+
+            <a href="../index.html"
+               class="button regresar">
+                Regresar
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="../js/Login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

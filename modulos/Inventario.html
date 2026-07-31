@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - RICURAS LA 23</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/Inventario.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Inventario</h1>
+        <h2>Registrar producto</h2>
+
+        <div class="field">
+            <label class="label">Categoría:</label>
+
+            <div class="select">
+                <select id="categoria" required>
+                    <option value="">Seleccione una categoría</option>
+                    <option value="Alimentos">Alimentos</option>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Utensilios">Utensilios</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Código del producto:</label>
+            <input class="input" id="codigo" type="text" required placeholder="Ingrese el código">
+        </div>
+
+        <div class="field">
+            <label class="label">Nombre del producto:</label>
+            <input class="input" id="nombre" type="text" required placeholder="Ingrese el nombre">
+        </div>
+
+        <div class="field">
+            <label class="label">Descripción:</label>
+            <textarea class="textarea" id="descripcion" required placeholder="Ingrese una descripción"></textarea>
+        </div>
+
+        <div class="field">
+            <label class="label">Cantidad:</label>
+            <input class="input" id="cantidad" type="number" required placeholder="Ingrese la cantidad">
+        </div>
+
+        <div class="field">
+            <label class="label">Precio unitario:</label>
+            <input class="input" id="precio" type="number" required placeholder="Ingrese el precio">
+        </div>
+
+        <div class="field">
+            <label class="label">Proveedor:</label>
+            <input class="input" id="proveedor" type="text" required placeholder="Ingrese el proveedor">
+        </div>
+
+        <div class="botones">
+
+            <button class="button registrar" id="buttoninventory">
+                Registrar producto
+            </button>
+
+            <a href="../index.html" class="button cancelar">
+                Cancelar
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="../js/Inventario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: radial-gradient(
+        circle at top,
+        #101c32 0%,
+        #080d17 45%,
+        #05070b 100%
+    );
+    color: #e8edf5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ENCABEZADO */
+
+.main-header {
+    background: #05080e;
+    border-bottom: 1px solid #172b49;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    background: transparent !important;
+}
+
+.navbar-item {
+    background: transparent !important;
+}
+
+.restaurant-logo {
+    font-size: 32px;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 8px rgba(0, 140, 255, 0.35));
+}
+
+.restaurant-title {
+    color: #ffffff !important;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(0, 140, 255, 0.25);
+}
+
+
+/* CONTENIDO */
+
+.main-content {
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title .title {
+    color: #ffffff !important;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.section-title .subtitle {
+    color: #8d9bb0 !important;
+}
+
+
+/* COLUMNAS */
+
+.columns {
+    margin-top: 0 !important;
+}
+
+.column {
+    padding: 12px;
+}
+
+
+/* TARJETAS */
+
+.module-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 190px;
+    padding: 25px;
+
+    background: linear-gradient(
+        145deg,
+        #101a2b,
+        #0a111e
+    );
+
+    border: 1px solid #1b3558;
+    border-radius: 16px;
+
+    text-decoration: none;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* PARTE SUPERIOR DE LA TARJETA */
+
+.module-card::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #1677ff,
+        transparent
+    );
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.module-card:hover {
+    transform: translateY(-7px);
+
+    background: linear-gradient(
+        145deg,
+        #12223a,
+        #0b1423
+    );
+
+    border-color: #1677ff;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.55),
+        0 0 25px rgba(22, 119, 255, 0.12);
+}
+
+.module-card:hover::before {
+    opacity: 1;
+}
+
+
+/* ICONOS */
+
+.module-icon {
+    flex-shrink: 0;
+
+    width: 115px;
+    height: 115px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 25px;
+
+    background: linear-gradient(
+        145deg,
+        #111f35,
+        #09111e
+    );
+
+    border: 1px solid #203e66;
+    border-radius: 14px;
+
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.module-icon img {
+    width: 75px;
+    height: 75px;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.module-card:hover .module-icon {
+    transform: scale(1.04);
+
+    border-color: #1677ff;
+
+    box-shadow: 0 0 18px rgba(22, 119, 255, 0.15);
+}
+
+.module-card:hover .module-icon img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px rgba(22, 119, 255, 0.35));
+}
+
+
+/* TEXTO */
+
+.module-content {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.module-content .title {
+    color: #ffffff !important;
+    margin-bottom: 10px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.module-card:hover .module-content .title {
+    color: #3d9aff !important;
+}
+
+.module-content p {
+    margin: 0;
+
+    color: #91a0b5;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* FLECHA */
+
+.module-arrow {
+    position: absolute;
+
+    right: 22px;
+    bottom: 18px;
+
+    color: #267ff5;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    opacity: 0.7;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease,
+        color 0.3s ease;
+}
+
+.module-card:hover .module-arrow {
+    transform: translateX(7px);
+    color: #4da3ff;
+    opacity: 1;
+}
+
+
+/* BRILLO DE LA TARJETA */
+
+.module-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    right: -60px;
+    top: -60px;
+
+    background: #1677ff;
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    filter: blur(60px);
+
+    transition: opacity 0.4s ease;
+}
+
+.module-card:hover::after {
+    opacity: 0.12;
+}
+
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+    .main-content {
+        padding: 30px 15px 50px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .section-title .title {
+        font-size: 1.8rem;
+    }
+
+    .module-card {
+        min-height: 180px;
+    }
+}
+
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+
+    .restaurant-title {
+        font-size: 1.4rem;
+    }
+
+    .restaurant-logo {
+        font-size: 26px;
+    }
+
+    .module-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+    }
+
+    .module-icon {
+        width: 100px;
+        height: 100px;
+
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .module-icon img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .module-content {
+        padding-right: 0;
+    }
+
+    .module-content .title {
+        margin-bottom: 8px;
+    }
+
+    .module-content p {
+        font-size: 14px;
+    }
+
+    .module-arrow {
+        position: static;
+        margin-top: 15px;
+    }
+}

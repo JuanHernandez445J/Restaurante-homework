@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos - RICURAS LA 23</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/Pedidos.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>RICURAS LA 23</h1>
+        <h2>Realizar Pedido</h2>
+
+        <div class="field">
+            <label class="label">Nombre del producto</label>
+            <input class="input" type="text" id="nombreProducto" name="nombreProducto" required placeholder="Ingrese el nombre del producto">
+        </div>
+
+        <div class="field">
+            <label class="label">Dirección completa</label>
+            <input class="input" type="text" id="direccion" name="direccion" required placeholder="Ingrese la dirección completa">
+        </div>
+
+        <div class="field">
+            <label class="label">Nombre del usuario</label>
+            <input class="input" type="text" id="nombreUsuario" name="nombreUsuario" required placeholder="Ingrese el nombre del usuario">
+        </div>
+
+        <div class="field">
+            <label class="label">Cantidad de productos</label>
+            <input class="input" type="number" id="cantidad" name="cantidad" required placeholder="Ingrese la cantidad">
+        </div>
+
+        <div class="field">
+            <label class="label">Método de pago</label>
+
+            <div class="select">
+                <select id="metodoPago" name="metodoPago" required>
+                    <option value="">Seleccione un método de pago</option>
+                    <option value="efectivo">Efectivo</option>
+                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Teléfono</label>
+            <input class="input" type="tel" id="telefono" name="telefono" required placeholder="Ingrese su número de teléfono">
+        </div>
+
+        <div class="botones">
+
+            <button type="submit" class="button realizar" id="buttonPedido">
+                Realizar Pedido
+            </button>
+
+            <a href="../index.html" class="button cancelar">
+                Cancelar pedido
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="../js/Pedidos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
