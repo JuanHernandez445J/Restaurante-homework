@@ -10,11 +10,13 @@ let telefono = document.getElementById("telefono").value;
 let correo = document.getElementById("correo").value;
 let genero = document.getElementById("genero").value;
 let cargo = document.getElementById("cargo").value;
-let fechaNacimiento = document.getElementById("fechaNacimiento").value;
+let fechaNacimientoTexto = document.getElementById("fechaNacimiento").value;
+let fechaNacimiento = new Date(fechaNacimientoTexto);
 let contraseña = document.getElementById("contraseña").value;
 let hoy = new Date();
+hoy.setHours(0, 0, 0, 0);
 
-if(nombre.trim() === "" || apellido.trim() === "" || tipoDocumento.trim() === "" || numeroDocumento.trim() === "" || telefono.trim() === "" || correo.trim() === "" || genero.trim() === "" || cargo.trim() === "" || fechaNacimiento.trim() === "" || contraseña.trim() === "")
+if(nombre.trim() === "" || apellido.trim() === "" || tipoDocumento.trim() === "" || numeroDocumento.trim() === "" || telefono.trim() === "" || correo.trim() === "" || genero.trim() === "" || cargo.trim() === "" || fechaNacimientoTexto.trim() === "" || contraseña.trim() === "")
 {
      Swal.fire({
         position: "top-end",
@@ -114,19 +116,9 @@ else if(!/^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$/.test(cargo)) {
     console.log("Cargo tiene que ser texto");
 }
 
-else if(!/^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$/.test(genero)) {
-    Swal.fire({
-        position: "top-end",
-        icon: "error",
-        title: "Genero tiene que ser texto",
-        showConfirmButton: false,
-        timer: 1500
-    });
-    console.log("Genero tiene que ser texto");
-}
-
 else if (fechaNacimiento > hoy) {
     Swal.fire({
+        position: "top-end",
         icon: "error",
         title: "La fecha de nacimiento no puede ser futura",
         showConfirmButton: false,

@@ -5,8 +5,10 @@ botonGuardar.addEventListener("click", function(event){
 let tipoMesa = document.getElementById("tipoMesa").value;
 let nombreCompleto = document.getElementById("nombreCompleto").value;
 let fechaReserva = document.getElementById("fechaReserva").value;
+let fecha = new Date(fechaReserva);
 let cantidadPersonas = document.getElementById("cantidadPersonas").value;
 let hoy = new Date()
+hoy.setHours(0, 0, 0, 0);
 if(tipoMesa.trim() === "" || nombreCompleto.trim() === "" || fechaReserva.trim() === "" || cantidadPersonas.trim() === ""){
     Swal.fire({
         position: "top-end",
@@ -40,7 +42,7 @@ else if(!/^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$/.test(nombreCompleto)) {
     console.log("Nombre Completo tiene que ser Texto");
 }
 
-else if (fechaReserva < hoy) {
+else if (fecha < hoy) {
     Swal.fire({
         position: "top-end",
         icon: "error",
