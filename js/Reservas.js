@@ -6,7 +6,8 @@ let tipoMesa = document.getElementById("tipoMesa").value;
 let nombreCompleto = document.getElementById("nombreCompleto").value;
 let fechaReserva = document.getElementById("fechaReserva").value;
 let cantidadPersonas = document.getElementById("cantidadPersonas").value;
-if(tipoMesa == "" || nombreCompleto == "" || fechaReserva == "" || cantidadPersonas == ""){
+let hoy = new Date()
+if(tipoMesa.trim() === "" || nombreCompleto.trim() === "" || fechaReserva.trim() === "" || cantidadPersonas.trim() === ""){
     Swal.fire({
         position: "top-end",
         icon: "error",
@@ -16,6 +17,51 @@ if(tipoMesa == "" || nombreCompleto == "" || fechaReserva == "" || cantidadPerso
     });
     console.log("Campos incompletos");
 }
+
+else if(!/^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$/.test(tipoMesa)) {
+    Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Tipo de Mesa tiene que ser Texto",
+        showConfirmButton: false,
+        timer: 1500
+    });
+    console.log("Tipo de Mesa tiene que ser Texto");
+}
+
+else if(!/^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$/.test(nombreCompleto)) {
+    Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Nombre Completo tiene que ser Texto",
+        showConfirmButton: false,
+        timer: 1500
+    });
+    console.log("Nombre Completo tiene que ser Texto");
+}
+
+else if (fechaReserva < hoy) {
+    Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "La fecha de reserva no puede ser anterior a hoy",
+        showConfirmButton: false,
+        timer: 1500
+    });
+    console.log("La fecha de reserva no puede ser anterior a hoy");
+}
+
+else if(!/^\d+$/.test(cantidadPersonas)) {
+    Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Cantidad de Personas tiene que ser Numeros",
+        showConfirmButton: false,
+        timer: 1500
+    });
+    console.log("Cantidad de Personas tiene que ser Numeros");
+}
+
 else{
     Swal.fire({
         position: "top-end",

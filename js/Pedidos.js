@@ -9,7 +9,7 @@ let cantidad = document.getElementById("cantidad").value;
 let metodoPago = document.getElementById("metodoPago").value;
 let telefono = document.getElementById("telefono").value;
 
-if(nombreProducto == "" || direccion == "" || nombreUsuario == "" || cantidad == "" || metodoPago == "" || telefono == ""){
+if(nombreProducto.trim() === "" || direccion.trim() === "" || nombreUsuario.trim() === "" || cantidad.trim() === "" || metodoPago.trim() === "" || telefono.trim() === ""){
     Swal.fire({
         position: "top-end",
         icon: "error",
@@ -19,6 +19,62 @@ if(nombreProducto == "" || direccion == "" || nombreUsuario == "" || cantidad ==
     });
     console.log("Campos incompletos");
 }
+
+else if(!/^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$/.test(nombreProducto)) {
+    Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Nombre del Producto tiene que ser Texto",
+        showConfirmButton: false,
+        timer: 1500
+    });
+    console.log("Nombre del Producto tiene que ser Texto");
+}
+
+else if(!/^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$/.test(nombreUsuario)) {
+    Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Nombre de usuario tiene que ser Texto",
+        showConfirmButton: false,
+        timer: 1500
+    });
+    console.log("Nombre de usuario tiene que ser Texto");
+}
+
+else if(!/^\d+$/.test(cantidad)) {
+    Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Cantidad tiene que ser Numeros",
+        showConfirmButton: false,
+        timer: 1500
+    });
+    console.log("Cantidad tiene que ser Numeros");
+}
+
+else if(!/^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$/.test(metodoPago)) {
+    Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Metodo de Pago tiene que ser Texto",
+        showConfirmButton: false,
+        timer: 1500
+    });
+    console.log("Metodo de Pago tiene que ser Texto");
+}
+
+else if(!/^\d+$/.test(telefono)) {
+    Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Telefono tiene que ser Numeros",
+        showConfirmButton: false,
+        timer: 1500
+    });
+    console.log("Telefono tiene que ser Numeros");
+}
+
 else{
     Swal.fire({
         position: "top-end",
