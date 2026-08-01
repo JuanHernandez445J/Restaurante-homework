@@ -22,33 +22,20 @@
         <div class="field">
             <label class="label">Nombre</label>
 
-            <input class="input"
-                   type="text"
-                   id="nombre"
-                   name="nombre"
-                   required
-                   placeholder="Ingrese su nombre">
+            <input class="input" type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre">
         </div>
 
         <div class="field">
             <label class="label">Apellido</label>
 
-            <input class="input"
-                   type="text"
-                   id="apellido"
-                   name="apellido"
-                   required
-                   placeholder="Ingrese su apellido">
+            <input class="input" type="text" id="apellido" name="apellido" required placeholder="Ingrese su apellido">
         </div>
 
         <div class="field">
             <label class="label">Tipo de documento</label>
 
             <div class="select">
-                <select id="tipoDocumento"
-                        name="tipoDocumento"
-                        required>
-
+                <select id="tipoDocumento" name="tipoDocumento" required>
                     <option value="cedula">
                         Cédula de Ciudadanía
                     </option>
@@ -72,44 +59,22 @@
         <div class="field">
             <label class="label">Número de documento</label>
 
-            <input class="input"
-                   type="text"
-                   id="numeroDocumento"
-                   name="numeroDocumento"
-                   required
-                   placeholder="Ingrese su número de documento">
+            <input class="input" type="text" id="numeroDocumento" name="numeroDocumento" required placeholder="Ingrese su número de documento">
         </div>
-
         <div class="field">
             <label class="label">Teléfono</label>
-
-            <input class="input"
-                   type="tel"
-                   id="telefono"
-                   name="telefono"
-                   required
-                   placeholder="Ingrese su número de teléfono">
+            <input class="input" type="tel" id="telefono" name="telefono" required placeholder="Ingrese su número de teléfono">
         </div>
 
         <div class="field">
             <label class="label">Correo electrónico</label>
-
-            <input class="input"
-                   type="email"
-                   id="correo"
-                   name="correo"
-                   required
-                   placeholder="Ingrese su correo electrónico">
+            <input class="input" type="email" id="correo" name="correo" required placeholder="Ingrese su correo electrónico">
         </div>
 
         <div class="field">
             <label class="label">Género</label>
-
             <div class="select">
-                <select id="genero"
-                        name="genero"
-                        required>
-
+                <select id="genero" name="genero" required>
                     <option value="">
                         Seleccione su género
                     </option>
@@ -132,11 +97,8 @@
 
         <div class="field">
             <label class="label">Cargo</label>
-
             <div class="select">
-                <select id="cargo"
-                        name="cargo"
-                        required>
+                <select id="cargo" name="cargo" required>
 
                     <option value="">
                         Seleccione un cargo
@@ -152,42 +114,19 @@
 
         <div class="field">
             <label class="label">Fecha de nacimiento</label>
-
-            <input class="input"
-                   type="date"
-                   id="fechaNacimiento"
-                   name="fechaNacimiento"
-                   required>
+            <input class="input" type="date" id="fechaNacimiento" name="fechaNacimiento" required>
         </div>
 
         <div class="field">
             <label class="label">Contraseña</label>
-
-            <input class="input"
-                   type="password"
-                   id="contraseña"
-                   name="contraseña"
-                   required
-                   placeholder="Ingrese su contraseña">
+            <input class="input" type="password" id="contraseña" name="contraseña" required placeholder="Ingrese su contraseña">
         </div>
-
         <div class="botones">
+            <button class="button registrar" type="submit" id="buttonUsuario"> Registrar Usuario </button>
 
-            <button class="button registrar"
-                    type="submit"
-                    id="buttonUsuario">
-                Registrar Usuario
-            </button>
-
-            <a href="../index.html"
-               class="button cancelar">
-                Cancelar registro
-            </a>
-
+            <a href="../index.html" class="button cancelar"> Cancelar registro </a>
         </div>
-
     </div>
-
     <script src="../js/Usuarios.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
